@@ -24,8 +24,8 @@ export default function Description({ handleAdd, transactionsList, setTransactio
       expense: isExpense,
     };
     handleAdd(transaction);
-    // setDesc('');
-    // setAmount('');
+    setDesc('');
+    setAmount('');
   };
 
   console.log(isExpense);
