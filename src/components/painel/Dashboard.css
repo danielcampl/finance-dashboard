@@ -1,0 +1,128 @@
+/* PAINEL
+---------------------- */
+
+section.painel-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #E0AAFF;
+}
+
+div.header-content {
+  width: 100%;
+  height: 18vh;
+  text-align: center;
+  padding-top: 70px;
+  background-color: #3C096C;
+  color: #fff;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+}
+
+div.header-content h1 {
+  flex-grow: 1;
+}
+
+.logout-icon{
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+div.container-value {
+  padding: 10px 450px;
+}
+
+/* FINANCE */
+/* ----------------------- */
+
+div.top-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+div.values {
+  background-color: #fff;
+  padding: 30px 65px;
+  margin: -45px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+div.values-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 70px;
+  font-size: 25px;
+}
+
+div.values p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.money-up{
+  color: green;
+}
+
+.money-down{
+  color: red;
+}
+
+/* DESCRIPTION */
+/* --------------------------------- */
+
+div.mid-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  margin-top: 70px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+div.input-values-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+div.input-values-container input {
+  padding: 3px;
+}
+
+div.select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+
+div.select-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+div.mid-content button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #3C096C;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
