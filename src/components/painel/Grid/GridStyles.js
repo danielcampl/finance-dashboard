@@ -8,6 +8,14 @@ box-shadow: 0 0 5px #ccc;
 border-radius: 8px;
 max-width: 1120px;
 margin: 20px auto;
+
+@media (max-width: 768px) {
+  width: 330px;
+}
+
+@media (min-width: 769px) and (max-width: 1525px) {
+  width: 750px;
+}
 `;
 
 export const Thead = styled.thead``;

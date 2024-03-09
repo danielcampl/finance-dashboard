@@ -37,10 +37,10 @@ div.container-value {
 
 div.top-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 100px;
+  gap: 120px;
 }
 
 div.values {
@@ -211,7 +211,7 @@ div.mid-content button {
   /* FINANCE */
   /* -------------------- */
   div.top-content {
-    gap: 0px;
+    gap: 100px;
   }
   
   div.values {
