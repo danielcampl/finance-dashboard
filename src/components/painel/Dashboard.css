@@ -184,6 +184,11 @@ div.mid-content button {
     gap: 20px;
     padding: 15px;
   }
+
+  div.mid-content button {
+    padding: 8px;
+    font-size: 12px;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1525px) {
@@ -229,5 +234,23 @@ div.mid-content button {
   /* -------------------- */
   div.mid-content {
     width: 750px;
+    gap: 10px;
+  }
+
+  div.mid-content button {
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  div.input-values-container input {
+    width: 120px;
+  }
+
+  div.input-values-container span {
+    font-size: 14px;
+  }
+
+  .select-container label {
+    font-size: 13px;
   }
 }
