@@ -28,3 +28,26 @@ div.loading-content p{
     transform: rotate(360deg);
   }
 }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 468px) {
+  .loading-img{
+    width: 20px;
+    height: 20px;
+  }
+
+  div.loading-content p{
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 469px) and (max-width: 768px) {
+  .loading-img{
+    width: 22px;
+    height: 22px;
+  }
+
+  div.loading-content p{
+    font-size: 18px;
+  }
+}

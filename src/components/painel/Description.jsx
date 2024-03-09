@@ -31,7 +31,7 @@ export default function Description({ handleAdd, transactionsList, setTransactio
   console.log(isExpense);
 
   return (
-    <>
+    <section className='description-container'>
       <div className="mid-content">
         <div className="input-values-container">
           <span>Descrição</span>
@@ -77,6 +77,6 @@ export default function Description({ handleAdd, transactionsList, setTransactio
         </button>
       </div>
       <Grid items={transactionsList} setItems={setTransactionsList} />
-    </>
+    </section>
   )
 }

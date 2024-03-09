@@ -214,3 +214,32 @@ div.sign-in h1{
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 468px) {
+    .container {
+        width: 350px;
+        min-height: 380px;
+    }
+
+    .container button{
+        font-size: 10px;
+        padding: 10px 32px;
+        margin-top: 10px;
+    }
+
+    .container p{
+        font-size: 12px;
+    }
+    
+    .container span{
+        font-size: 10px;
+    }
+  }
+  
+  @media (min-width: 469px) and (max-width: 768px) {
+    .container {
+        width: 510px;
+        min-height: 480px;
+    }
+  }

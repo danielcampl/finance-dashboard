@@ -24,7 +24,6 @@ export default function Login() {
   const saveUser = () => {
     localStorage.setItem("user", JSON.stringify({ email }));
     navigate('/dashboard');
-    // navigate('/');
   };
 
   return (
