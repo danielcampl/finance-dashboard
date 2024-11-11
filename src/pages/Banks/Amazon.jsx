@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
-import './Dashboard.css';
-import Finance from './Finance';
-import Description from './Description';
-import { IoLogOut } from "react-icons/io5";
+import '../../components/painel/Dashboard.css';
+import Finance from '../../components/painel/Finance';
+import Description from '../../components/painel/Description';
+import { IoLogOut, IoArrowBackCircle } from "react-icons/io5";
 // import formatCurrency from '../../utils/formatCurrency';
 
-export default function Painel() {
-  const data = localStorage.getItem('transactions');
+export default function Amazon() {
+  const data = localStorage.getItem('transactionsAmazon');
   const [transactionsList, setTransactionsList] = useState(data ? JSON.parse(data) : []);
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
@@ -17,6 +17,10 @@ export default function Painel() {
 
   const backToLogin = () => {
     navigate('/');
+  };
+
+  const dashboard = () => {
+    navigate('/dashboard');
   };
 
   useEffect(() => {
@@ -35,15 +39,19 @@ export default function Painel() {
   }, [transactionsList]);
 
   const handleAdd = (transaction) => {
-    const newArrayTransactions = [...transactionsList, transaction];
-    setTransactionsList(newArrayTransactions);
-    localStorage.setItem('transactions', JSON.stringify(newArrayTransactions));
+    const newArrayTransactionsAmazon = [...transactionsList, transaction];
+    setTransactionsList(newArrayTransactionsAmazon);
+    localStorage.setItem('transactionsAmazon', JSON.stringify(newArrayTransactionsAmazon));
   }
 
   return (
     <section className='painel-container'>
       <div className='header-content'>
-        <h1>Controle Financeiro</h1>
+        <IoArrowBackCircle
+          className='logout-icon'
+          onClick={dashboard}
+        />
+        <h1>Controle Financeiro Amazon</h1>
         <IoLogOut
           className='logout-icon'
           onClick={backToLogin}

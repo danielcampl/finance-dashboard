@@ -7,7 +7,14 @@ export default function Grid({ items, setItems }) {
   const onDelete = (ID) => {
     const newArr = items.filter((transaction) => transaction.id !== ID);
     setItems(newArr);
-    localStorage.setItem('transactions', JSON.stringify(newArr));
+    localStorage.setItem([
+      'transactionsItau',
+      'transactionsNubank',
+      'transactionsAmazon',
+      'transactionsInter',
+      'transactionsPicpay'
+    ], 
+    JSON.stringify(newArr));
   };
 
   return (

@@ -1,0 +1,41 @@
+div.all-content-banks {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+div.top-content-banks {
+  flex-direction: column;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+div.values-banks {
+  padding: 30px 65px;
+  gap: 25px;
+}
+
+div.values-banks h4 {
+  font-size: 28px;
+}
+
+div.values-content-banks {
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  color: red;
+  gap: 10px;
+}

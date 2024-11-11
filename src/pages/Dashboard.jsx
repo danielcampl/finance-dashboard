@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-import Painel from '../components/painel/Painel';
-import Start from '../components/loadings/start/Start';
+// import Painel from '../components/painel/Painel';
+import BankSelect from './BankSelect';
+import Loading from '../components/loadings/loading/Loading';
 
 export default function Dashboard() {
   const [loading, setLoading] = useState(false);
@@ -10,7 +11,7 @@ export default function Dashboard() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false);
-    }, 10000);
+    }, 500);
   }, []);
 
   return (
@@ -18,9 +19,10 @@ export default function Dashboard() {
       {
         loading
           ?
-          <Start />
+          <Loading />
           :
-          <Painel />
+          // <Painel />
+          <BankSelect />
       }
     </section>
   )

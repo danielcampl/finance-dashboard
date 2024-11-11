@@ -10,22 +10,22 @@ section.painel-container {
 div.header-content {
   width: 100%;
   height: 18vh;
-  text-align: center;
-  padding-top: 70px;
+  padding: 30px;
   background-color: #3C096C;
   color: #fff;
   font-size: 26px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 div.header-content h1 {
-  flex-grow: 1;
+  width: 100%;
+  text-align: center;
 }
 
 .logout-icon{
   cursor: pointer;
-  margin-right: 40px;
 }
 
 div.container-value {
