@@ -20,7 +20,7 @@ export default function Bank({ transaction, name }) {
   };
 
   const dashboard = () => {
-    navigate('/dashboard');
+    navigate('/expenses');
   };
 
   useEffect(() => {
