@@ -1,0 +1,12 @@
+div.container-investment-card {
+    width: 45%;
+    height: 95px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 10px 5px 20px 5px #00171f;
+}
+
+div.container-value {
+    /* flex-direction: row; */
+}
