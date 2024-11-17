@@ -8,6 +8,20 @@ div.container-bankcard {
   cursor: pointer;
 }
 
+div.container-bankcard-dashboard {
+  width: 40%;
+  height: 90px;
+  padding: 25px 50px;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 5px 20px 5px #00171f;
+  cursor: pointer;
+}
+
 div.container-all-total {
   width: 40%;
   height: 90px;

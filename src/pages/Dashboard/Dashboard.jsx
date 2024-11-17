@@ -3,9 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import './Dashboard.css';
 import Loading from '../../components/loading/Loading';
-import BankCards from '../../components/Cards/BankCards';
 import { IoLogOut } from "react-icons/io5";
-import TotalPayments from '../../components/Cards/TotalPayments';
 
 export default function Dashboard() {
     const navigate = useNavigate();
@@ -15,12 +13,20 @@ export default function Dashboard() {
         setLoading(true)
         setTimeout(() => {
             setLoading(false);
-        }, 500);
+        }, 1500);
     }, []);
 
     const backToLogin = () => {
         navigate('/');
-      };
+    };
+
+    const goToExpenses = () => {
+        navigate('/expenses');
+    };
+
+    const goToInvest = () => {
+        navigate('/investments');
+    };
 
     return (
         <section>
@@ -31,20 +37,19 @@ export default function Dashboard() {
                     :
                     <div>
                         <div className='header-content'>
-                            <h1>Controle Financeiro Bancários</h1>
+                            <h1>Controle Financeiro</h1>
                             <IoLogOut
                                 className='logout-icon'
                                 onClick={backToLogin}
                             />
                         </div>
-                        <div className='container-value'>
-                            <BankCards transaction='transactionsAmazon' link='amazon' name='Bradescard Amazon' />
-                            <BankCards transaction='transactionsItau' link='itau' name='Banco Itau' />
-                            <BankCards transaction='transactionsInter' link='inter' name='Banco Inter' />
-                            <BankCards transaction='transactionsNubank' link='nubank' name='Banco Nubank' />
-                            <BankCards transaction='transactionsPicpay' link='picpay' name='Banco Picpay' />
-                            <BankCards transaction='transactionsC6' link='c6' name='Banco C6 Bank' />
-                            <TotalPayments name='Total de Gastos' />
+                        <div className='container-value-dash'>
+                            <div className='container-bankcard-dashboard' onClick={goToExpenses}>
+                                <h1>Gastos do Mês</h1>
+                            </div>
+                            {/* <div className='container-bankcard-dashboard' onClick={goToInvest}>
+                                <h1>Investimentos</h1>
+                            </div> */}
                         </div>
                     </div>
             }

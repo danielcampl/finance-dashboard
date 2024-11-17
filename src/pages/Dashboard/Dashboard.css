@@ -40,6 +40,18 @@ div.container-value {
   gap: 40px;
 }
 
+div.container-value-dash {
+  padding: 50px 450px;
+  width: 100%;
+  height: 82vh;
+  background-color: #b0d0d3;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  gap: 40px;
+}
+
 div.all-content-banks {
   width: 100%;
   display: flex;
