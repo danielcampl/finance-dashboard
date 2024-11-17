@@ -1,0 +1,60 @@
+ /* DESCRIPTION */
+ /* --------------------------------- */
+ .description-container {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ div.mid-content {
+     width: 100%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     text-align: center;
+     gap: 40px;
+     margin-top: 70px;
+     background-color: #fff;
+     padding: 20px;
+     border-radius: 8px;
+ }
+
+ div.input-values-container {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 2px;
+ }
+
+ div.input-values-container input {
+     padding: 3px;
+ }
+
+ div.select-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     gap: 15px;
+ }
+
+ div.select-container div {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     gap: 5px;
+ }
+
+ div.mid-content button {
+     border: none;
+     border-radius: 8px;
+     padding: 10px;
+     background-color: #3C096C;
+     color: #fff;
+     font-size: 14px;
+     font-weight: 500;
+     cursor: pointer;
+ }

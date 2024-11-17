@@ -1,0 +1,122 @@
+/* PAINEL */
+/* -------------------- */
+
+section.painel-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #b0d0d3;
+}
+
+div.header-content {
+  width: 100%;
+  height: 18vh;
+  padding: 30px;
+  background-color: #00171f;
+  color: #fff;
+  font-size: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.header-content h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.logout-icon {
+  cursor: pointer;
+}
+
+div.container-value {
+  padding: 50px 450px;
+  width: 100%;
+  height: 82vh;
+  background-color: #b0d0d3;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+div.all-content-banks {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+div.top-content-banks {
+  flex-direction: column;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+div.values-banks {
+  padding: 30px 65px;
+  gap: 25px;
+}
+
+div.values-banks h4 {
+  font-size: 28px;
+}
+
+div.values-content-banks {
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: red;
+  gap: 10px;
+}
+
+/* BANK  */
+div.all-content-banks {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+div.top-content-banks {
+  flex-direction: column;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+div.values-banks {
+  padding: 30px 65px;
+  gap: 25px;
+}
+
+div.values-banks h4 {
+  font-size: 28px;
+}
+
+div.values-content-banks {
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: red;
+  gap: 10px;
+}

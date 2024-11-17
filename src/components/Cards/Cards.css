@@ -1,0 +1,18 @@
+div.container-bankcard {
+  width: 40%;
+  height: 90px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 10px 5px 20px 5px #00171f;
+  cursor: pointer;
+}
+
+div.container-all-total {
+  width: 40%;
+  height: 90px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 10px 5px 20px 5px #00171f;
+}

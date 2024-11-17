@@ -1,0 +1,42 @@
+/* FINANCE */
+/* ----------------------- */
+
+div.top-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 120px;
+}
+
+div.values {
+    background-color: #fff;
+    padding: 30px 65px;
+    margin: -45px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+div.values-content {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 70px;
+    font-size: 25px;
+}
+
+div.values p {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.money-up {
+    color: green;
+}
+
+.money-down {
+    color: red;
+}

@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
+
+import Login from "./pages/Login/Login";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Bank from "./components/banks/Bank";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<Login />} />
+        <Route path="/dashboard" exact element={<Dashboard />} />
+        <Route path="/itau" exact element={<Bank transaction='transactionsItau' name='Itau' />} />
+        <Route path="/nubank" exact element={<Bank transaction='transactionsNubank' name='Nubank' />} />
+        <Route path="/amazon" exact element={<Bank transaction='transactionsAmazon' name='Amazon' />} />
+        <Route path="/inter" exact element={<Bank transaction='transactionsInter' name='Inter' />} />
+        <Route path="/picpay" exact element={<Bank transaction='transactionsPicpay' name='Picpay' />} />
+        <Route path="/c6" exact element={<Bank transaction='transactionsC6' name='C6 Bank' />} />
+        <Route path="*" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 
