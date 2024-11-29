@@ -52,6 +52,7 @@ export default function Expenses() {
                             <BankCards transaction='transactionsNubank' link='nubank' name='Banco Nubank' />
                             <BankCards transaction='transactionsPicpay' link='picpay' name='Banco Picpay' />
                             <BankCards transaction='transactionsC6' link='c6' name='Banco C6 Bank' />
+                            <BankCards transaction='transactionsReceived' link='received' name='Pagamentos recebidos' />
                             <TotalPayments name='Total de Gastos' />
                         </div>
                     </div>
