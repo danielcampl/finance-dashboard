@@ -25,6 +25,7 @@ function App() {
         <Route path="/inter" exact element={<Bank transaction='transactionsInter' name='Inter' />} />
         <Route path="/picpay" exact element={<Bank transaction='transactionsPicpay' name='Picpay' />} />
         <Route path="/c6" exact element={<Bank transaction='transactionsC6' name='C6 Bank' />} />
+        <Route path="/received" exact element={<Bank transaction='transactionsReceived' name='Pagamentos recebidos' />} />
         <Route path="*" element={<Login />} />
       </Routes>
     </Router>

@@ -45,7 +45,7 @@ export default function Dashboard() {
                         </div>
                         <div className='container-value-dash'>
                             <div className='container-bankcard-dashboard' onClick={goToExpenses}>
-                                <h1>Gastos do Mês</h1>
+                                <h1>Financeiros do Mês</h1>
                             </div>
                             <div className='container-bankcard-dashboard' onClick={goToInvest}>
                                 <h1>Investimentos</h1>
