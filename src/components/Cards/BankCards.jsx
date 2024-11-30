@@ -30,17 +30,10 @@ export default function BankCards({ transaction, link, name }) {
         setTotal(`${Number(income) < Number(expense) ? '-' : ''}R$ ${total}`);
     }, [transactionsList]);
 
-    // const handleAdd = (transaction) => {
-    //     const newArrayTransactions = [...transactionsList, transaction];
-    //     setTransactionsList(newArrayTransactions);
-    //     localStorage.setItem(dataSetAction, JSON.stringify(newArrayTransactions));
-    //   }
-
     return (
         <div
             className='container-bankcard'
             onClick={hadleBankLink}
-            // handleAdd={handleAdd}
         >
             <h1>{name}</h1>
             <Total total={total} />
