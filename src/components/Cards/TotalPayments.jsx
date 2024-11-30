@@ -80,7 +80,7 @@ export default function TotalPayments({ name }) {
 
     return (
         <div
-            className='container-bankcard'
+            className='container-bankcard-total'
         >
             <h1>{name}</h1>
             <Total total={total} />
