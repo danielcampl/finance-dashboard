@@ -20,6 +20,8 @@ export default function TotalPayments({ name }) {
     const [c6Pay, setC6Pay] = useState(c6Value ? JSON.parse(c6Value) : []);
     const [receivedPay, setReceivedPay] = useState(receivedValue ? JSON.parse(receivedValue) : []);
     const [total, setTotal] = useState(0);
+    const [incomes, setIncomes] = useState(0);
+    const [expenses, setExpenses] = useState(0);
 
     useEffect(() => {
         // --AMAZON-- //
@@ -28,6 +30,8 @@ export default function TotalPayments({ name }) {
         const expenseAmazonPay = amountExpenseAmazonPay.reduce((acc, cur) => acc + cur, 0).toFixed(2);
         const incomeAmazonPay = amountIncomeAmazonPay.reduce((acc, cur) => acc + cur, 0).toFixed(2);
         const totalAmazonPay = parseFloat(Math.abs(incomeAmazonPay - expenseAmazonPay).toFixed(2));
+        console.log(totalAmazonPay);
+
 
         // --ITAU-- //
         const amountExpenseItauPay = itauPay.filter((item) => item.expense).map((transaction) => Number(transaction.amount));
@@ -72,18 +76,46 @@ export default function TotalPayments({ name }) {
         const totalReceived = parseFloat(Math.abs(incomeReceived - expenseReceived).toFixed(2));
 
         // --TOTAL-- //
-        setTotal(
-            `R$ ${(- totalAmazonPay - totalItauPay - totalInterPay - totalNubankPay - totalPicpayPay - totalC6Pay + totalReceived).toFixed(2)}`
+        setExpenses(
+            `
+            ${(parseFloat(expenseAmazonPay) +
+                parseFloat(expenseItauPay) +
+                parseFloat(expenseInterPay) +
+                parseFloat(expenseNubankPay) +
+                parseFloat(expensePicpayPay) +
+                parseFloat(expenseC6Pay))
+                .toFixed(2)}
+                `
+        );
+        setIncomes(
+            `
+            ${(parseFloat(incomeAmazonPay) +
+                parseFloat(incomeItauPay) +
+                parseFloat(incomeInterPay) +
+                parseFloat(incomeNubankPay) +
+                parseFloat(incomePicpayPay) +
+                parseFloat(incomeC6Pay) +
+                totalReceived)
+                .toFixed(2)}
+                `
         );
 
-    }, [amazonPay, itauPay, interPay, nubankPay, picpayPay, c6Pay, receivedPay]);
+        console.log(`gastos: ${expenses}`);
+
+        setTotal(
+            `${Number(expenses) > Number(incomes) ? 
+                '-' : 
+                ''}R$ ${Math.abs(parseFloat(expenses) - parseFloat(incomes)).toFixed(2)}`
+        );
+
+    }, [amazonPay, itauPay, interPay, nubankPay, picpayPay, c6Pay, receivedPay, expenses, incomes]);
 
     return (
         <div
-            className='container-bankcard'
+            className='container-bankcard-total'
         >
             <h1>{name}</h1>
-            <Total total={total} />
+            <Total total={`Subtotal: ${total}`} expenses={`Total gasto: -R$ ${expenses}`} incomes={`Total recebido: R$ ${incomes}`} />
         </div>
     )
 }
