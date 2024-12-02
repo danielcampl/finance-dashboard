@@ -76,7 +76,7 @@ export default function TotalPayments({ name }) {
             `R$ ${(- totalAmazonPay - totalItauPay - totalInterPay - totalNubankPay - totalPicpayPay - totalC6Pay + totalReceived).toFixed(2)}`
         );
 
-    }, [amazonPay, itauPay, receivedPay]);
+    }, [amazonPay, itauPay, interPay, nubankPay, picpayPay, c6Pay, receivedPay]);
 
     return (
         <div
