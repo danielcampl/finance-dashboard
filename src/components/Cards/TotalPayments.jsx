@@ -99,12 +99,9 @@ export default function TotalPayments({ name }) {
                 .toFixed(2)}
                 `
         );
-
-        console.log(`gastos: ${expenses}`);
-
         setTotal(
-            `${Number(expenses) > Number(incomes) ? 
-                '-' : 
+            `${Number(expenses) > Number(incomes) ?
+                '-' :
                 ''}R$ ${Math.abs(parseFloat(expenses) - parseFloat(incomes)).toFixed(2)}`
         );
 
@@ -115,7 +112,7 @@ export default function TotalPayments({ name }) {
             className='container-bankcard-total'
         >
             <h1>{name}</h1>
-            <Total total={`Subtotal: ${total}`} expenses={`Total gasto: -R$ ${expenses}`} incomes={`Total recebido: R$ ${incomes}`} />
+            <Total total={`Subtotal: ${total}`} expenses={`Total gasto: ${Number(expenses) === Number(0) ? '' : '-'}R$ ${expenses}`} incomes={`Total recebido: R$ ${incomes}`} />
         </div>
     )
 }
