@@ -46,7 +46,7 @@ export default function Expenses() {
                             />
                         </div>
                         <div className='container-value'>
-                            <BankCards src={`${'/images/amazon.png'}`} transaction='transactionsAmazon' link='amazon' name='Bradescard Amazon' />
+                            <BankCards src={`${'/images/bradescard.png'}`} transaction='transactionsAmazon' link='amazon' name='Bradescard Amazon' />
                             <BankCards src={`${'/images/itau.png'}`} transaction='transactionsItau' link='itau' name='Banco Itau' />
                             <BankCards src={`${'/images/inter.png'}`} transaction='transactionsInter' link='inter' name='Banco Inter' />
                             <BankCards src={`${'/images/nubank.png'}`} transaction='transactionsNubank' link='nubank' name='Banco Nubank' />
