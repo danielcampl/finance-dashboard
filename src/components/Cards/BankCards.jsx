@@ -4,9 +4,8 @@ import { useNavigate } from "react-router-dom";
 import './Cards.css';
 import Total from './Total';
 
-export default function BankCards({ transaction, link, name }) {
+export default function BankCards({ src, transaction, link, name }) {
     const data = localStorage.getItem(`${transaction}`);
-    // const dataSetAction = `${transaction}`;
     const [transactionsList, setTransactionsList] = useState(data ? JSON.parse(data) : []);
     const [income, setIncome] = useState(0);
     const [expense, setExpense] = useState(0);
@@ -25,18 +24,27 @@ export default function BankCards({ transaction, link, name }) {
         const income = amountIncome.reduce((acc, cur) => acc + cur, 0).toFixed(2);
 
         const total = Math.abs(income - expense).toFixed(2);
-        setIncome(`R$ ${income}`);
-        setExpense(`R$ ${expense}`);
+        setIncome(`${income}`);
+        setExpense(`${expense}`);
         setTotal(`${Number(income) < Number(expense) ? '-' : ''}R$ ${total}`);
-    }, [transactionsList]);
+        console.log(expense);
+
+    }, [transactionsList, income, expense, total]);
 
     return (
         <div
             className='container-bankcard'
             onClick={hadleBankLink}
         >
-            <h1>{name}</h1>
-            <Total total={total} />
+            <div className='title-cards'>
+                <img className='logo-img' src={`${src}`} alt={`${src}`} />
+                <h1>{name}</h1>
+            </div>
+            <Total
+                total={`${total}`}
+                expenses={`${Number(expense) === Number(0) ? '' : '-'}R$ ${expense}`}
+                incomes={`R$ ${income}`}
+            />
         </div>
     )
 }

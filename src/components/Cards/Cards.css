@@ -1,20 +1,29 @@
+div.title-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+img.logo-img {
+  width: 23px;
+  border-radius: 10px;
+}
+
 div.container-bankcard {
   width: 40%;
-  height: 90px;
+  height: 130px;
   padding: 20px 30px;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 10px 5px 20px 5px #00171f;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-div.container-bankcard-total {
-  width: 40%;
-  height: 125px;
-  padding: 20px 30px;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 10px 5px 20px 5px #00171f;
+div.total-card {
   cursor: default;
 }
 
@@ -39,4 +48,11 @@ div.container-all-total {
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 10px 5px 20px 5px #00171f;
+}
+
+div p.dash-description {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
 }
