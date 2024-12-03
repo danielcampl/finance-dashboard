@@ -108,10 +108,14 @@ export default function TotalPayments({ name }) {
 
     return (
         <div
-            className='container-bankcard-total'
+            className='container-bankcard total-card'
         >
             <h1>{name}</h1>
-            <Total total={`Subtotal: ${total}`} expenses={`Total gasto: ${Number(expenses) === Number(0) ? '' : '-'}R$ ${expenses}`} incomes={`Total recebido: R$ ${incomes}`} />
+            <Total
+                total={`Subtotal: ${total}`}
+                expenses={`Total gasto: ${Number(expenses) === Number(0) ? '' : '-'}R$ ${expenses}`}
+                incomes={`Total recebido: R$ ${incomes}`}
+            />
         </div>
     )
 }

@@ -46,16 +46,16 @@ export default function Expenses() {
                             />
                         </div>
                         <div className='container-value'>
-                            <BankCards transaction='transactionsAmazon' link='amazon' name='Bradescard Amazon' />
-                            <BankCards transaction='transactionsItau' link='itau' name='Banco Itau' />
-                            <BankCards transaction='transactionsInter' link='inter' name='Banco Inter' />
-                            <BankCards transaction='transactionsNubank' link='nubank' name='Banco Nubank' />
-                            <BankCards transaction='transactionsPicpay' link='picpay' name='Banco Picpay' />
-                            <BankCards transaction='transactionsC6' link='c6' name='Banco C6 Bank' />
-                            <BankCards transaction='transactionsReceived' link='received' name='Pagamentos recebidos' />
+                            <BankCards src={`${'/images/amazon.png'}`} transaction='transactionsAmazon' link='amazon' name='Bradescard Amazon' />
+                            <BankCards src={`${'/images/itau.png'}`} transaction='transactionsItau' link='itau' name='Banco Itau' />
+                            <BankCards src={`${'/images/inter.png'}`} transaction='transactionsInter' link='inter' name='Banco Inter' />
+                            <BankCards src={`${'/images/nubank.png'}`} transaction='transactionsNubank' link='nubank' name='Banco Nubank' />
+                            <BankCards src={`${'/images/picpay.png'}`} transaction='transactionsPicpay' link='picpay' name='Banco Picpay' />
+                            <BankCards src={`${'/images/c6.png'}`} transaction='transactionsC6' link='c6' name='Banco C6 Bank' />
+                            <BankCards src={`${'/images/pix.png'}`} transaction='transactionsReceived' link='received' name='Pagamentos recebidos' />
                             <TotalPayments
-                            transaction='transactionsReceived'
-                            name='Total dos gastos mensais'
+                                transaction='transactionsReceived'
+                                name='Total dos gastos mensais'
                             />
                         </div>
                     </div>
