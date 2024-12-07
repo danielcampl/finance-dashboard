@@ -1,33 +1,39 @@
-import React from 'react';
-
-import * as C from './GridStyles.js';
-import GridItem from './GridItem.jsx';
+import React, { useEffect } from 'react';
+import * as C from './GridStyles';
+import GridItem from './GridItem';
 
 export default function Grid({ items, setItems, transaction }) {
-  const onDelete = (ID) => {
-    const newArr = items.filter((transaction) => transaction.id !== ID);
-    setItems(newArr);
-    localStorage.setItem([transaction], 
-    JSON.stringify(newArr));
-  };
-
-  return (
-    <C.Table>
-      <C.Thead>
-        <C.Tr>
-          <C.Th width={40}>Descrição</C.Th>
-          <C.Th width={40}>Valor</C.Th>
-          <C.Th width={10}>Tipo</C.Th>
-          <C.Th width={10}></C.Th>
-        </C.Tr>
-      </C.Thead>
-      <C.Tbody>
-        {
-          items?.map((item, index) => (
-            <GridItem key={index} item={item} onDelete={onDelete} />
-          ))
+    useEffect(() => {
+        // Carrega os dados do localStorage ao inicializar
+        const data = localStorage.getItem(transaction);
+        if (data) {
+            setItems(JSON.parse(data));
         }
-      </C.Tbody>
-    </C.Table>
-  )
+    }, [transaction, setItems]);
+
+    const onDelete = (ID) => {
+        const newArr = items.filter((transaction) => transaction.id !== ID);
+        setItems(newArr);
+        localStorage.setItem(transaction, JSON.stringify(newArr));
+    };
+
+    return (
+        <C.Table>
+            <C.Thead>
+                <C.Tr>
+                    <C.Th width={40}>Descrição</C.Th>
+                    <C.Th width={40}>Valor</C.Th>
+                    <C.Th width={10}>Tipo</C.Th>
+                    <C.Th width={10}></C.Th>
+                </C.Tr>
+            </C.Thead>
+            <C.Tbody>
+                {
+                    items?.map((item, index) => (
+                        <GridItem key={index} item={item} onDelete={onDelete} />
+                    ))
+                }
+            </C.Tbody>
+        </C.Table>
+    );
 }
