@@ -10,6 +10,110 @@ img.logo-img {
   border-radius: 10px;
 }
 
+div.content-value-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.content-value-btn button {
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  background-color: #cdcdcd;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Estilização do container de botões (mostrado/ocultado dinamicamente) */
+div.show-btn {
+  display: flex;
+  width: 150px;
+  padding: 35px 0;
+  gap: 5px;
+}
+
+/* Botão de Cancelar */
+div.show-btn button.cancel-btn {
+  background-color: #c62727;
+  color: #fff;
+  z-index: 10;
+  opacity: .7;
+  transition: 0.4s;
+  width: 130px;
+  padding: 20px;
+}
+div.show-btn button.cancel-btn:hover {
+  opacity: 1;
+}
+
+/* Botão de Confirmar */
+div.show-btn button.confirm-btn {
+  background-color: #21971b;
+  color: #fff;
+  z-index: 10;
+  opacity: .7;
+  transition: 0.4s;
+  width: 130px;
+  padding: 20px;
+}
+div.show-btn button.confirm-btn:hover {
+  opacity: 1;
+}
+
+/* Botão principal (pagar/zerar) */
+div.main-btn {
+  width: 90px;
+  padding: 35px 15px;
+  display: block;
+}
+div.main-btn button.pay-reset-btn {
+  background-color: #003459;
+  color: #fff;
+  opacity: .8;
+  transition: 0.4s;
+}
+div.main-btn button.pay-reset-btn:hover {
+  opacity: 1;
+}
+
+/* CONTAINER DO MODAL  */
+div.fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  cursor: default;
+}
+div.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 3;
+  padding: 100px;
+  border-radius: 10px;
+  cursor: default;
+  width: 600px;
+  max-width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+/* div.modal-header {} */
+div.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 div.container-bankcard {
   width: 40%;
   height: 130px;
