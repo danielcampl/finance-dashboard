@@ -28,8 +28,8 @@ export default function Login() {
 
   return (
     <section className='login-page'>
-      <div class="container" id="container">
-        <div class="form-container sign-up">
+      <div className="container" id="container">
+        <div className="form-container sign-up">
           <form>
             <h1>Crie Uma Conta</h1>
             <span>Ou use seu email para registrar</span>
@@ -39,7 +39,7 @@ export default function Login() {
             <button>Registrar</button>
           </form>
         </div>
-        <div class="form-container sign-in">
+        <div className="form-container sign-in">
           <form>
             <h1>Entrar</h1>
             <span>Ou use sua conta de email e senha</span>
@@ -65,24 +65,24 @@ export default function Login() {
             </button>
           </form>
         </div>
-        <div class="toggle-container">
-          <div class="toggle">
-            <div class="toggle-panel toggle-left">
+        <div className="toggle-container">
+          <div className="toggle">
+            <div className="toggle-panel toggle-left">
               <h1>Bem Vindo De Volta</h1>
               <p>Insira seus dados para utilizar nosso site</p>
               <button
-                class="hidden"
+                className="hidden"
                 id="login"
                 onClick={() => container.classList.remove('active')}
               >
                 Entrar
               </button>
             </div>
-            <div class="toggle-panel toggle-right">
+            <div className="toggle-panel toggle-right">
               <h1>Ola, Amigo!</h1>
               <p>Registre seus dados para utilizar nosso site</p>
               <button
-                class="hidden"
+                className="hidden"
                 id="register"
                 onClick={() => container.classList.add('active')}
               >Registrar
