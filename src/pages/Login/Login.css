@@ -11,7 +11,7 @@
 
 section.login-page{
     background-color: #fff;
-    background: linear-gradient(to right, #00171f, #003459);
+    background: linear-gradient(to right, #001233, #002855);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +49,7 @@ section.login-page{
 }
 
 .container button{
-    background-color: #00171f;
+    background-color: #001233;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -169,7 +169,7 @@ div.sign-in h1{
 .toggle{
     background-color: #fff;
     height: 100%;
-    background: linear-gradient(to right, #00171f, #003459);
+    background: linear-gradient(to right, #001233, #002855);
     color: #fff;
     position: relative;
     left: -100%;

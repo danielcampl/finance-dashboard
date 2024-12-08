@@ -4,14 +4,14 @@
 section.painel-container {
   width: 100%;
   min-height: 100vh;
-  background-color: #b0d0d3;
+  background-color: #979DAC;
 }
 
 div.header-content {
   width: 100%;
   height: 18vh;
   padding: 30px;
-  background-color: #00171f;
+  background-color: #001233;
   color: #fff;
   font-size: 26px;
   display: flex;
@@ -32,7 +32,7 @@ div.container-value {
   padding: 50px 450px;
   width: 100%;
   height: 82vh;
-  background-color: #b0d0d3;
+  background-color: #002855;
   display: flex;
   /* justify-content: center; */
   flex-direction: column;
@@ -44,7 +44,7 @@ div.container-value-dash {
   padding: 50px 450px;
   width: 100%;
   height: 82vh;
-  background-color: #b0d0d3;
+  background-color: #002855;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -68,7 +68,7 @@ div.top-content-banks {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  background-color: #fff;
+  background-color: #979DAC;
   padding: 20px;
   border-radius: 8px;
   cursor: pointer;
@@ -109,7 +109,7 @@ div.top-content-banks {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  background-color: #fff;
+  background-color: #979DAC;
   padding: 20px;
   border-radius: 8px;
   cursor: pointer;
