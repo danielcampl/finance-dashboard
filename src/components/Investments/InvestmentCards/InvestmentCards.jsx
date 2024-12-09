@@ -12,19 +12,16 @@ export default function InvestmentCards({ transaction, link, name }) {
     // const [total, setTotal] = useState(0);
     const navigate = useNavigate();
 
-    // const hadleInvestmentLink = () => {
-    //     navigate(`/${link}`);
-    // };
+    const hadleInvestmentLink = () => {
+        navigate(`/${link}`);
+    };
 
     return (
         <div
             className='container-investment-card'
-            // onClick={hadleInvestmentLink}
+            onClick={hadleInvestmentLink}
         >
             <h1>{name}</h1>
-            <Total
-                total='R$0,00'
-            />
         </div>
     )
 }

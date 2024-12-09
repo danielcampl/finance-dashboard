@@ -10,15 +10,21 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Bank from "./components/banks/Bank";
 import Expenses from "./components/Expenses";
 import Investments from "./components/Investments/Invesments";
+import InvestmentsPage from "./components/Investments/investments/InvestmentsPage";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" exact element={<Login />} />
+        {/* --------- */}
         <Route path="/dashboard" exact element={<Dashboard />} />
         <Route path="/expenses" exact element={<Expenses />} />
+        {/* --------- */}
         <Route path="/investments" exact element={<Investments />} />
+        <Route path="/sofisa-invest" exact element={<InvestmentsPage name='Sofisa Direto' />} />
+        <Route path="/nu-invest" exact element={<InvestmentsPage name='Caixinha Nubank' />} />
+        {/* --------- */}
         <Route path="/itau" exact element={<Bank transaction='transactionsItau' name='Itau' />} />
         <Route path="/nubank" exact element={<Bank transaction='transactionsNubank' name='Nubank' />} />
         <Route path="/amazon" exact element={<Bank transaction='transactionsAmazon' name='Amazon' />} />
@@ -26,6 +32,7 @@ function App() {
         <Route path="/picpay" exact element={<Bank transaction='transactionsPicpay' name='Picpay' />} />
         <Route path="/c6" exact element={<Bank transaction='transactionsC6' name='C6 Bank' />} />
         <Route path="/received" exact element={<Bank transaction='transactionsReceived' name='Pagamentos recebidos' />} />
+        {/* --------- */}
         <Route path="*" element={<Login />} />
       </Routes>
     </Router>
