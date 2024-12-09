@@ -55,7 +55,7 @@ export default function Bank({ transaction, name }) {
           onClick={backToLogin}
         />
       </div>
-      <div className='container-value'>
+      <div className='bank-finance-container'>
         <Finance income={income} expense={expense} total={total} />
         <Description
           handleAdd={handleAdd}

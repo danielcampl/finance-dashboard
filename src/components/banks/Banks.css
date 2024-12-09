@@ -39,3 +39,12 @@ div.values-content-banks {
     color: red;
     gap: 10px;
 }
+div.bank-finance-container {
+    padding: 30px 450px;
+    width: 100%;
+    min-height: 82vh;
+    background-color: #002855;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
