@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import './Cards.css';
 
-export default function ButtonPay({ desc, transaction, onConfirm }) {
-    const data = localStorage.getItem(`${transaction}`);
-    const [transactionsList, setTransactionsList] = useState(data ? JSON.parse(data) : []);
+export default function ButtonPay({ desc, onConfirm }) {
     const [isConfirmVisible, setIsConfirmVisible] = useState(false); // Estado para controlar a visibilidade
 
     // Alternar visibilidade dos botões

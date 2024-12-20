@@ -24,10 +24,6 @@ export default function Dashboard() {
         navigate('/expenses');
     };
 
-    const goToInvest = () => {
-        navigate('/investments');
-    };
-
     return (
         <section>
             {
@@ -46,9 +42,6 @@ export default function Dashboard() {
                         <div className='container-value-dash'>
                             <div className='container-bankcard-dashboard' onClick={goToExpenses}>
                                 <h1>Financeiros do Mês</h1>
-                            </div>
-                            <div className='container-bankcard-dashboard' onClick={goToInvest}>
-                                <h1>Investimentos</h1>
                             </div>
                         </div>
                     </div>
