@@ -132,3 +132,40 @@ div.values-content-banks {
   color: red;
   gap: 10px;
 }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 468px) {
+  div.header-content {
+    width: 100%;
+    padding: 40px;
+    font-size: 20px;
+    justify-content: flex-start;
+  }
+  .logout-icon {
+    width: 100px;
+  }
+  div.container-value-dash {
+    padding: 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 469px) and (max-width: 768px) {
+  div.header-content {
+    width: 100%;
+    padding: 40px;
+    font-size: 20px;
+    justify-content: flex-start;
+  }
+  .logout-icon {
+    width: 40px;
+  }
+  div.container-value-dash {
+    padding: 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

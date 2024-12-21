@@ -41,3 +41,31 @@ div.values p {
 .money-down {
     color: red;
 }
+
+@media (max-width: 768px) {
+    div.top-content {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+    }
+    div.values {
+        padding: 30px 65px;
+        margin: -45;
+        gap: 8px;
+    }
+    div.values-content {
+        width: 130px;
+        gap: 0;
+        font-size: 23px;
+    }
+    div.values p {
+        font-size: 20px;
+    }
+    .money-up {
+        width: 20px;
+    }
+    .money-down {
+        width: 20px;
+    }
+}

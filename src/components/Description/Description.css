@@ -58,3 +58,13 @@
      font-weight: 500;
      cursor: pointer;
  }
+
+ @media (max-width: 768px) {
+    div.mid-content {
+        max-width: 60%;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 60px;
+        flex-direction: column;
+    }
+}
