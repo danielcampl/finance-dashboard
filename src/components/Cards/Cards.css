@@ -171,13 +171,42 @@ div.container-banks {
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
+@media (min-width: 350px) and (max-width: 468px) {
   div.container-banks {
-    padding: 50px 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    padding: 40px 0;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+  div.container-bankcard {
+    width: 70%;
+    height: 140px;
+    gap: 10px;
+  }
+  img.logo-img {
+    width: 20px;
+  }
+  div.container-bankcard h1 {
+    font-size: 16px;
+  }
+  p.dash-description {
+    font-size: 14px;
+  }
+  div.total-card {
+    cursor: default;
+  }
+  div.content-value-btn button {
+    width: 85px;
+  }
+}
+
+@media (min-width: 469px) and (max-width: 1020px) {
+  div.container-banks {
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
     align-items: center;
     flex-wrap: nowrap;
     gap: 40px;
@@ -191,7 +220,7 @@ div.container-banks {
     width: 20px;
   }
   div.container-bankcard h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
   div.total-card {
     cursor: default;
