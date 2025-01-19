@@ -6,16 +6,40 @@ import Total from './Total';
 import ButtonPay from './ButtonPay';
 
 export default function BankCards({ src, transaction, link, name, btn }) {
-    const data = localStorage.getItem(transaction);
-    const [transactionsList, setTransactionsList] = useState(data ? JSON.parse(data) : []);
+    const [transactionsList, setTransactionsList] = useState([]); // Estado inicial vazio
     const [income, setIncome] = useState(0);
     const [expense, setExpense] = useState(0);
     const [total, setTotal] = useState(0);
     const navigate = useNavigate();
 
+    // Carregar transações do localStorage
     useEffect(() => {
-        const amountExpense = transactionsList.filter((item) => item.expense).map((transaction) => Number(transaction.amount));
-        const amountIncome = transactionsList.filter((item) => !item.expense).map((transaction) => Number(transaction.amount));
+        const fetchTransactions = () => {
+            try {
+                const storedData = localStorage.getItem(transaction);
+                const parsedData = storedData ? JSON.parse(storedData) : [];
+                if (Array.isArray(parsedData)) {
+                    setTransactionsList(parsedData);
+                } else {
+                    setTransactionsList([]);
+                }
+            } catch (error) {
+                console.error("Erro ao carregar transações:", error);
+                setTransactionsList([]);
+            }
+        };
+
+        fetchTransactions();
+    }, [transaction]);
+
+    // Calcular rendas e despesas
+    useEffect(() => {
+        const amountExpense = transactionsList
+            .filter((item) => item.expense)
+            .map((transaction) => Number(transaction.amount));
+        const amountIncome = transactionsList
+            .filter((item) => !item.expense)
+            .map((transaction) => Number(transaction.amount));
 
         const expense = amountExpense.reduce((acc, cur) => acc + cur, 0).toFixed(2);
         const income = amountIncome.reduce((acc, cur) => acc + cur, 0).toFixed(2);
@@ -26,12 +50,13 @@ export default function BankCards({ src, transaction, link, name, btn }) {
         setTotal(`${Number(income) < Number(expense) ? '-' : ''}R$ ${total}`);
     }, [transactionsList]);
 
+    // Resetar transações
     const handleResetTransactions = () => {
-        // Apagar todas as transações desse banco
-        localStorage.removeItem(transaction);
-        setTransactionsList([]);
+        localStorage.removeItem(transaction); // Remove do localStorage
+        setTransactionsList([]); // Atualiza estado
     };
 
+    // Navegar para o link do banco
     const hadleBankLink = () => {
         navigate(`/${link}`);
     };

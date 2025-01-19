@@ -7,25 +7,41 @@ import Description from '../Description/Description';
 import { IoLogOut, IoArrowBackCircle } from "react-icons/io5";
 
 export default function Bank({ transaction, name }) {
-  const data = localStorage.getItem(`${transaction}`);
   const dataSetAction = `${transaction}`;
-  const [transactionsList, setTransactionsList] = useState(data ? JSON.parse(data) : []);
+  const [transactionsList, setTransactionsList] = useState([]); // Inicializa como lista vazia
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
   const [total, setTotal] = useState(0);
   const navigate = useNavigate();
 
-  const backToLogin = () => {
-    navigate('/');
-  };
-
-  const dashboard = () => {
-    navigate('/expenses');
-  };
-
+  // Função para carregar dados do localStorage
   useEffect(() => {
-    const amountExpense = transactionsList.filter((item) => item.expense).map((transaction) => Number(transaction.amount));
-    const amountIncome = transactionsList.filter((item) => !item.expense).map((transaction) => Number(transaction.amount));
+    const fetchTransactions = () => {
+      try {
+        const storedData = localStorage.getItem(dataSetAction);
+        const parsedData = storedData ? JSON.parse(storedData) : [];
+        if (Array.isArray(parsedData)) {
+          setTransactionsList(parsedData);
+        } else {
+          setTransactionsList([]);
+        }
+      } catch (error) {
+        console.error("Erro ao carregar transações:", error);
+        setTransactionsList([]);
+      }
+    };
+
+    fetchTransactions();
+  }, [dataSetAction]);
+
+  // Calcular rendas, despesas e total
+  useEffect(() => {
+    const amountExpense = transactionsList
+      .filter((item) => item.expense)
+      .map((transaction) => Number(transaction.amount));
+    const amountIncome = transactionsList
+      .filter((item) => !item.expense)
+      .map((transaction) => Number(transaction.amount));
 
     const expense = amountExpense.reduce((acc, cur) => acc + cur, 0).toFixed(2);
     const income = amountIncome.reduce((acc, cur) => acc + cur, 0).toFixed(2);
@@ -36,11 +52,22 @@ export default function Bank({ transaction, name }) {
     setTotal(`${Number(income) < Number(expense) ? '-' : ''}R$ ${total}`);
   }, [transactionsList]);
 
+  // Adicionar transação
   const handleAdd = (transaction) => {
     const newArrayTransactions = [...transactionsList, transaction];
     setTransactionsList(newArrayTransactions);
     localStorage.setItem(dataSetAction, JSON.stringify(newArrayTransactions));
-  }
+  };
+
+  // Navegar para a tela de login
+  const backToLogin = () => {
+    navigate('/');
+  };
+
+  // Navegar para o painel de despesas
+  const dashboard = () => {
+    navigate('/expenses');
+  };
 
   return (
     <section className='painel-container'>
@@ -65,5 +92,5 @@ export default function Bank({ transaction, name }) {
         />
       </div>
     </section>
-  )
+  );
 }
