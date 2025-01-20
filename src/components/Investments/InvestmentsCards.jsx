@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
-import './Cards.css';
-import Total from './Total';
-import ButtonPay from './ButtonPay';
+import '../Cards/Cards.css';
+import Total from '../Cards/Total';
 
-export default function BankCards({ src, transaction, link, name }) {
+export default function InvestmentsCards({ src, transaction, link, name }) {
     const [transactionsList, setTransactionsList] = useState([]); // Estado inicial vazio
     const [income, setIncome] = useState(0);
     const [expense, setExpense] = useState(0);
@@ -75,10 +74,6 @@ export default function BankCards({ src, transaction, link, name }) {
                     total={total}
                     expenses={`${Number(expense) === Number(0) ? '' : '-'}R$ ${expense}`}
                     incomes={`R$ ${income}`}
-                />
-                <ButtonPay
-                    desc={transaction === 'transactionsReceived' ? 'Zerar' : 'Pagar'}
-                    onConfirm={handleResetTransactions}
                 />
             </div>
         </div>
