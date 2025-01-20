@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Bank from "./components/banks/Bank";
 import Expenses from "./components/Expenses";
 import Investments from "./components/Investments/Investments";
+import Invest from "./components/Investments/Invest";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route path="/dashboard" exact element={<Dashboard />} />
         <Route path="/expenses" exact element={<Expenses />} />
         <Route path="/investments" exact element={<Investments />} />
-        <Route path="/sofisa" exact element={<Bank transaction='transactionsSofisa' name='Sofisa CDI' />} />
+        <Route path="/sofisa" exact element={<Invest transaction='transactionsSofisa' name='Sofisa CDI' />} />
         <Route path="/itau" exact element={<Bank transaction='transactionsItau' name='Itau' />} />
         <Route path="/nubank" exact element={<Bank transaction='transactionsNubank' name='Nubank' />} />
         <Route path="/amazon" exact element={<Bank transaction='transactionsAmazon' name='Amazon' />} />
