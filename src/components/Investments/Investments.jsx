@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
-import './Dashboard.css';
-import Loading from '../../components/loading/Loading';
-import { IoLogOut } from "react-icons/io5";
+import '../Cards/Cards.css';
+import Loading from '../loading/Loading';
+import InvestmentsCards from './InvestmentsCards';
+import { IoLogOut, IoArrowBackCircle } from "react-icons/io5";
 
-export default function Dashboard() {
+export default function Investments() {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
 
@@ -13,18 +14,15 @@ export default function Dashboard() {
         setLoading(true)
         setTimeout(() => {
             setLoading(false);
-        }, 1500);
+        }, 500);
     }, []);
 
     const backToLogin = () => {
         navigate('/');
     };
 
-    const goToExpenses = () => {
-        navigate('/expenses');
-    };
-    const goToInvest = () => {
-        navigate('/investments');
+    const dashboard = () => {
+        navigate('/dashboard');
     };
 
     return (
@@ -36,19 +34,18 @@ export default function Dashboard() {
                     :
                     <div>
                         <div className='header-content'>
-                            <h1>Controle Financeiro</h1>
+                            <IoArrowBackCircle
+                                className='logout-icon'
+                                onClick={dashboard}
+                            />
+                            <h1>Meus Investimentos</h1>
                             <IoLogOut
                                 className='logout-icon'
                                 onClick={backToLogin}
                             />
                         </div>
-                        <div className='container-value-dash'>
-                            <div className='container-bankcard-dashboard' onClick={goToExpenses}>
-                                <h1>Financeiros do Mês</h1>
-                            </div>
-                            <div className='container-bankcard-dashboard' onClick={goToInvest}>
-                                <h1>Investimentos</h1>
-                            </div>
+                        <div className='container-banks'>
+                            <InvestmentsCards src={`${'/images/sofisa.png'}`} transaction='transactionsSofisa' link='sofisa' name='Sofisa Direto' />
                         </div>
                     </div>
             }
