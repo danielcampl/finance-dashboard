@@ -8,7 +8,7 @@ import {
 import Login from "./pages/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Bank from "./components/banks/Bank";
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses.jsx";
 import Investments from "./components/Investments/Investments";
 import Invest from "./components/Investments/Invest";
 
@@ -25,8 +25,6 @@ function App() {
         <Route path="/nubank" exact element={<Bank transaction='transactionsNubank' name='Nubank' />} />
         <Route path="/amazon" exact element={<Bank transaction='transactionsAmazon' name='Amazon' />} />
         <Route path="/inter" exact element={<Bank transaction='transactionsInter' name='Inter' />} />
-        <Route path="/picpay" exact element={<Bank transaction='transactionsPicpay' name='Picpay' />} />
-        <Route path="/c6" exact element={<Bank transaction='transactionsC6' name='C6 Bank' />} />
         <Route path="/received" exact element={<Bank transaction='transactionsReceived' name='Pagamentos recebidos' />} />
         <Route path="*" element={<Login />} />
       </Routes>

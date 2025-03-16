@@ -9,8 +9,6 @@ export default function TotalPayments({ name }) {
         'transactionsItau',
         'transactionsInter',
         'transactionsNubank',
-        'transactionsPicpay',
-        'transactionsC6',
         'transactionsReceived'
     ];
 
@@ -19,8 +17,6 @@ export default function TotalPayments({ name }) {
         itauPay: [],
         interPay: [],
         nubankPay: [],
-        picpayPay: [],
-        c6Pay: [],
         receivedPay: []
     });
     const [total, setTotal] = useState(0);
@@ -45,8 +41,6 @@ export default function TotalPayments({ name }) {
                 itauPay: data.transactionsItau,
                 interPay: data.transactionsInter,
                 nubankPay: data.transactionsNubank,
-                picpayPay: data.transactionsPicpay,
-                c6Pay: data.transactionsC6,
                 receivedPay: data.transactionsReceived
             });
         };
